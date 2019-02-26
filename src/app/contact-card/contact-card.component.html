@@ -1,0 +1,16 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{cardData.firstName}} {{cardData.lastName}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="../../assets/img/user.png" alt="Profile Picture">
+    <mat-card-content>
+      <p>{{cardData.email}}</p>
+      <p>{{cardData.phoneNumber}}</p>
+      <p><span [ngClass]="{'active':  cardData.status === 'active', 'inactive':  cardData.status === 'inactive'}">
+{{cardData.status | titlecase}} </span></p>
+    </mat-card-content>
+    <mat-card-actions>
+        <button class="mb-2" mat-stroked-button color="primary" (click)="openFormDialog(cardData)" matTooltip="Edit contact" [matTooltipPosition]="'above'">Edit</button>
+      <button mat-stroked-button color="warn" (click)="deleteContact(cardData.id)" matTooltip="Delete contact" [matTooltipPosition]="'above'">Delete</button>
+    </mat-card-actions>
+  </mat-card>

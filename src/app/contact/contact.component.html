@@ -1,0 +1,40 @@
+<section class="not-found" *ngIf="!contactListToCheck?.length">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button mat-raised-button color="accent" (click)="openFormDialog()" class="add-contact-btn" matTooltip="Add a new contact"
+          [matTooltipPosition]="'above'">
+          Add a contact
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="search-result" *ngIf="contactListToCheck?.length">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span id="evo-nav-heading">Evolent Contact App </span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <button mat-raised-button color="accent" (click)="openFormDialog()" class="add-contact-btn" matTooltip="Add a new contact"
+            [matTooltipPosition]="'above'">
+            Add a contact
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div #showList class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4" *ngFor="let contact of contactList">
+        <app-contact-card [card-data]="contact"></app-contact-card>
+      </div>
+    </div>
+  </div>
+
+</section>
