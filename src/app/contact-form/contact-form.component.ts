@@ -15,9 +15,9 @@ export class ContactFormComponent implements OnInit {
 
     contactForm: FormGroup;
     isEditMode: boolean;
-    formtitle = 'Create Contact';
+    formtitle = 'Add Contact Form';
 
-    get f() { return this.contactForm.controls; }
+    get fields() { return this.contactForm.controls; }
 
     constructor(
         private fb: FormBuilder,
@@ -39,7 +39,7 @@ export class ContactFormComponent implements OnInit {
         if (this.data) {
             this.fillForm(this.data);
             this.isEditMode = true;
-            this.formtitle = 'Update Contact';
+            this.formtitle = 'Update Contact Form';
         }
     }
 

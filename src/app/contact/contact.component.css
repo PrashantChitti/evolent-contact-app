@@ -1,20 +1,25 @@
-.not-found {
-  background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7)), url(../../assets/img/404.png) center no-repeat;
-  height: 99.9vh;
+.no-contact {
+  background: radial-gradient(transparent 20%, rgba(0,0,0,0.2) 80%), url(../../assets/img/404.png) center no-repeat;
+  height: 100vh;
 }
 
-#evo-nav-heading {
+.no-contact .container-fluid {
+  padding-top: 10em;
+}
+
+.add-contact-btn {
+  font-size: 1.2em;
+}
+
+.no-contact .add-contact-btn:hover {
+  box-shadow: 0 0 7px 3px rgba(185, 149, 11, 0.64);
+}
+
+#nav-heading {
   width: 100%;
   text-align: center;
 }
 
-#search-contact {
-  display: block;
-  margin: 0.7em auto 0;
-}
-
-.no-record-wrapper {
-  text-align: center;
-  position: relative;
-  width: 100%;
+.add-button-wrapper {
+  padding: 1.5em 0;
 }

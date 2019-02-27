@@ -15,10 +15,10 @@
           <mat-form-field>
             <input matInput formControlName="firstName" placeholder="First Name *">
           </mat-form-field>
-          <div class="invalid-feedback" *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched)">
-            <div *ngIf="f.firstName.errors">
-              <div *ngIf="f.firstName.errors.required">First Name is required</div>
-              <div *ngIf="f.firstName.errors.pattern">Please enter only alphabets</div>
+          <div class="invalid-feedback" *ngIf="fields.firstName.invalid && (fields.firstName.dirty || fields.firstName.touched)">
+            <div *ngIf="fields.firstName.errors">
+              <div *ngIf="fields.firstName.errors.required">Please enter a First Name</div>
+              <div *ngIf="fields.firstName.errors.pattern">Numbers are not allowed</div>
             </div>
           </div>
         </div>
@@ -28,10 +28,10 @@
           <mat-form-field>
             <input matInput formControlName="lastName" placeholder="Last Name *">
           </mat-form-field>
-          <div class="invalid-feedback" *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched)">
-            <div *ngIf="f.lastName.errors">
-              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
-              <div *ngIf="f.lastName.errors.pattern">Please enter only alphabets</div>
+          <div class="invalid-feedback" *ngIf="fields.lastName.invalid && (fields.lastName.dirty || fields.lastName.touched)">
+            <div *ngIf="fields.lastName.errors">
+              <div *ngIf="fields.lastName.errors.required">Please enter a Last Name</div>
+              <div *ngIf="fields.lastName.errors.pattern">Numbers are not allowed</div>
             </div>
           </div>
         </div>
@@ -41,10 +41,10 @@
           <mat-form-field>
             <input matInput email formControlName="email" placeholder="Email *">
           </mat-form-field>
-          <div class="invalid-feedback" *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
-            <div *ngIf="f.email.errors">
-              <div *ngIf="f.email.errors.required">Email is required</div>
-              <div *ngIf="f.email.errors.email || f.email.errors.pattern ">Email must be a valid email address</div>
+          <div class="invalid-feedback" *ngIf="fields.email.invalid && (fields.email.dirty || fields.email.touched)">
+            <div *ngIf="fields.email.errors">
+              <div *ngIf="fields.email.errors.required">Please enter an email address</div>
+              <div *ngIf="fields.email.errors.email || fields.email.errors.pattern ">Invalid Email!!</div>
             </div>
           </div>
         </div>
@@ -52,12 +52,12 @@
       <div class="row">
         <div class="col">
           <mat-form-field>
-            <input matInput type="tel" mask="( 0000 ) - 000 - 000" minlength="10" formControlName="phoneNumber" placeholder="Phone Number *">
+            <input matInput type="tel" minlength="10" formControlName="phoneNumber" placeholder="Phone Number *">
           </mat-form-field>
-          <div class="invalid-feedback" *ngIf="f.phoneNumber.invalid && (f.phoneNumber.dirty || f.phoneNumber.touched)">
-            <div *ngIf="f.phoneNumber.errors">
-              <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
-              <div *ngIf="f.phoneNumber.errors.minlength">Phone Number should have 10 digits</div>
+          <div class="invalid-feedback" *ngIf="fields.phoneNumber.invalid && (fields.phoneNumber.dirty || fields.phoneNumber.touched)">
+            <div *ngIf="fields.phoneNumber.errors">
+              <div *ngIf="fields.phoneNumber.errors.required">Please enter a phone number</div>
+              <div *ngIf="fields.phoneNumber.errors.minlength">Phone Number should have 10 digits</div>
             </div>
           </div>
         </div>
@@ -74,9 +74,9 @@
     </div>
 
     <div class="row">
-      <div class="col ">
-        <button class="btn-position" [disabled]="contactForm.invalid" type="submit" mat-raised-button color="primary">Save</button>
-        <button class="btn-position mr-2" mat-raised-button color="accent" mat-dialog-close>Cancel</button>
+      <div class="col text-right">
+        <button class="mr-2" mat-raised-button color="accent" mat-dialog-close>Cancel</button>
+        <button [disabled]="contactForm.invalid" type="submit" mat-raised-button color="primary">Save</button>
       </div>
     </div>
   </form>
