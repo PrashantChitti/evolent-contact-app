@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container contact=form-wrapper">
 
   <div class="row">
     <div class="col text-center">
@@ -18,7 +18,7 @@
           <div class="invalid-feedback" *ngIf="fields.firstName.invalid && (fields.firstName.dirty || fields.firstName.touched)">
             <div *ngIf="fields.firstName.errors">
               <div *ngIf="fields.firstName.errors.required">Please enter a First Name</div>
-              <div *ngIf="fields.firstName.errors.pattern">Numbers are not allowed</div>
+              <div *ngIf="fields.firstName.errors.pattern">Please use only alphabets</div>
             </div>
           </div>
         </div>
@@ -31,7 +31,7 @@
           <div class="invalid-feedback" *ngIf="fields.lastName.invalid && (fields.lastName.dirty || fields.lastName.touched)">
             <div *ngIf="fields.lastName.errors">
               <div *ngIf="fields.lastName.errors.required">Please enter a Last Name</div>
-              <div *ngIf="fields.lastName.errors.pattern">Numbers are not allowed</div>
+              <div *ngIf="fields.lastName.errors.pattern">Please use only alphabets</div>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field>
-            <input matInput type="tel" minlength="10" formControlName="phoneNumber" placeholder="Phone Number *">
+            <input matInput type="tel" minlength="10" mask="000-000-0000" formControlName="phoneNumber" placeholder="Phone Number *">
           </mat-form-field>
           <div class="invalid-feedback" *ngIf="fields.phoneNumber.invalid && (fields.phoneNumber.dirty || fields.phoneNumber.touched)">
             <div *ngIf="fields.phoneNumber.errors">
@@ -66,8 +66,8 @@
         <div class="col">
           <label class="status-label">Status </label>
           <mat-radio-group formControlName="status">
-            <mat-radio-button value="active">Active</mat-radio-button>
-            <mat-radio-button class="ml-3" value="inactive">Inactive</mat-radio-button>
+            <mat-radio-button value="active" color="primary">Active</mat-radio-button>
+            <mat-radio-button class="ml-3" value="inactive" color="primary">Inactive</mat-radio-button>
           </mat-radio-group>
         </div>
       </div>

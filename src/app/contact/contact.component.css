@@ -1,10 +1,19 @@
 .no-contact {
-  background: radial-gradient(transparent 20%, rgba(0,0,0,0.2) 80%), url(../../assets/img/404.png) center no-repeat;
-  height: 100vh;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
-.no-contact .container-fluid {
-  padding-top: 10em;
+.no-contact .col {
+  position: relative;
+}
+
+.no-contact .add-contact-btn {
+  position: absolute;
+  bottom: 47%;
+  right: 28%;
 }
 
 .add-contact-btn {

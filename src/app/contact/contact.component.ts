@@ -30,7 +30,9 @@ export class ContactComponent implements OnInit {
   openFormDialog(formData = ''): void {
     this.dialog.open(ContactFormComponent, {
       width: '600px',
-      data: formData
+      data: formData,
+      panelClass: 'c-form-dialog',
+      backdropClass: 'c-form-backdrop'
     });
   }
 }

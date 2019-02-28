@@ -1,12 +1,12 @@
 <mat-card class="contact-card text-center">
   <mat-card-header>
-    <mat-card-title class="mb-2">{{cardData.firstName}} {{cardData.lastName}}</mat-card-title>
+    <mat-card-title class="mb-1">{{cardData.firstName}} {{cardData.lastName}}</mat-card-title>
   </mat-card-header>
   <img mat-card-image src="../../assets/img/user.png" alt="Profile Picture">
-  <mat-card-content>
-    <p class="mb-2">{{cardData.email}}</p>
-    <p class="mb-2">{{cardData.phoneNumber}}</p>
-    <p class="mb-2"><span [ngClass]="{'active':  cardData.status === 'active', 'inactive':  cardData.status === 'inactive'}">
+  <mat-card-content class="mb-1">
+    <p class="mb-1">{{cardData.email}}</p>
+    <p class="mb-1">{{cardData.phoneNumber}}</p>
+    <p class="mb-1"><span [ngClass]="{'active':  cardData.status === 'active', 'inactive':  cardData.status === 'inactive'}">
         {{cardData.status | titlecase}} </span></p>
   </mat-card-content>
   <mat-card-actions>

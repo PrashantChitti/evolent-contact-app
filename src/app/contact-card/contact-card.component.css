@@ -20,11 +20,15 @@
 
 .contact-card .mat-card-image {
   max-width: 100%;
-  width: 80%;
-  height: 160px;
+  width: 70%;
+  height: 140px;
   margin: 0;
 }
 
 .contact-card .mat-card-header {
   justify-content: center;
+}
+
+.contact-card .mat-card-title {
+  word-break: break-all;
 }
